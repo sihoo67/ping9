@@ -52,12 +52,13 @@ h1 {
     justify-content: center;
     overflow: hidden;
     height: 150px;
+    position: relative;
 }
 
 .card {
     min-width: 300px;
     max-width: 300px;
-    height: 150px;  /* 카드 높이 설정 */
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +66,7 @@ h1 {
     background-color: #333;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    transform: translateX(100%);
+    position: absolute;
     opacity: 0;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
@@ -73,6 +74,16 @@ h1 {
 .card.active {
     transform: translateX(0);
     opacity: 1;
+}
+
+.card.exit-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.card.exit-right {
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 .nav-buttons {
