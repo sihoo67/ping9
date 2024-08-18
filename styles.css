@@ -57,6 +57,10 @@ h1 {
 .card {
     min-width: 300px;
     max-width: 300px;
+    height: 150px;  /* 카드 높이 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     background-color: #333;
     border-radius: 10px;
