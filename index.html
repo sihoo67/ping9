@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>개발자를 빡치게 하는 법</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자를 빡치게 하는 방법</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>개발자를 빡치게 하는 법</h1>
-    <ul id="item-list">
-      <li>요구사항 변경을 프로젝트 마지막 날에 요청하기</li>
-      <li>테스트 환경 없이 배포하기</li>
-      <li>무작정 기존 코드를 비판하기</li>
-      <li>댓글을 설명 없이 수정하기</li>
-      <li>슬쩍 세미콜론을 그리스식 물음표인 에로티티코로 변경하기</li>
-      <li>중간에 슬쩍 빈 곳이 없는 공백을 넣기</li>
-    </ul>
-    <section class="review-section">
-      <h2>리뷰 추가</h2>
-      <textarea id="review-input" placeholder="여기에 리뷰를 작성하세요"></textarea>
-      <button id="add-review-btn">리뷰 추가</button>
-    </section>
-    <section id="reviews-container">
-      <h2>리뷰</h2>
-      <ul id="reviews-list"></ul>
-    </section>
-  </div>
-  <script src="main.js"></script>
+    <div class="container">
+        <div class="intro">
+            <h1>개발자를 빡치게 하는 방법</h1>
+            <div class="scroll-indicator">▼</div>
+        </div>
+        <div class="content">
+            <div class="card" id="card-1">
+                <p>무조건 갑작스러운 요구사항 변경하기</p>
+            </div>
+            <div class="card" id="card-2">
+                <p>서버 다운되면 바로 전화하기</p>
+            </div>
+            <div class="card" id="card-3">
+                <p>당장 수정해달라고 하고 휴가 가기</p>
+            </div>
+            <div class="card" id="card-4">
+                <p>프로젝트 마지막 날에 요구사항 변경하기</p>
+            </div>
+            <div class="card" id="card-5">
+                <p>테스트 환경 없이 바로 배포하기</p>
+            </div>
+            <div class="card" id="card-6">
+                <p>무작정 기존 코드를 비판하기</p>
+            </div>
+            <div class="card" id="card-7">
+                <p>댓글을 설명 없이 수정하기</p>
+            </div>
+            <div class="card" id="card-8">
+                <p>슬쩍 세미콜론을 그리스식 물음표(;)로 변경하기</p>
+            </div>
+            <div class="card" id="card-9">
+                <p>중간에 슬쩍 빈 곳이 없는 공백을 넣기</p>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button id="prev-btn">←</button>
+            <button id="next-btn">→</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
