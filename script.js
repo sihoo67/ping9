@@ -6,11 +6,11 @@ const nextBtn = document.getElementById('next-btn');
 function showCard(index) {
     cards.forEach((card, i) => {
         card.classList.remove('active', 'exit-left', 'exit-right');
-        
+
         if (i === currentCard) {
             card.classList.add(index > currentCard ? 'exit-left' : 'exit-right');
         }
-        
+
         if (i === index) {
             setTimeout(() => card.classList.add('active'), 500);
         }
