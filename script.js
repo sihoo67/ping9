@@ -5,21 +5,28 @@ const nextBtn = document.getElementById('next-btn');
 
 function showCard(index) {
     cards.forEach((card, i) => {
-        card.classList.remove('active');
+        card.classList.remove('active', 'exit-left', 'exit-right');
+        
+        if (i === currentCard) {
+            card.classList.add(index > currentCard ? 'exit-left' : 'exit-right');
+        }
+        
         if (i === index) {
-            card.classList.add('active');
+            setTimeout(() => card.classList.add('active'), 500);
         }
     });
+
+    currentCard = index;
 }
 
 nextBtn.addEventListener('click', () => {
-    currentCard = (currentCard + 1) % cards.length;
-    showCard(currentCard);
+    const nextIndex = (currentCard + 1) % cards.length;
+    showCard(nextIndex);
 });
 
 prevBtn.addEventListener('click', () => {
-    currentCard = (currentCard - 1 + cards.length) % cards.length;
-    showCard(currentCard);
+    const prevIndex = (currentCard - 1 + cards.length) % cards.length;
+    showCard(prevIndex);
 });
 
 // 초기 카드 표시
