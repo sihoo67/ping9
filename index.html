@@ -1,35 +1,84 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let currentCard = 0;
-    const cards = document.querySelectorAll('.card');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-
-    function showCard(index) {
-        cards.forEach((card, i) => {
-            card.classList.remove('active', 'exit-left', 'exit-right');
-
-            if (i === currentCard) {
-                card.classList.add(index > currentCard ? 'exit-left' : 'exit-right');
-            }
-
-            if (i === index) {
-                setTimeout(() => card.classList.add('active'), 500);
-            }
-        });
-
-        currentCard = index;
-    }
-
-    nextBtn.addEventListener('click', () => {
-        const nextIndex = (currentCard + 1) % cards.length;
-        showCard(nextIndex);
-    });
-
-    prevBtn.addEventListener('click', () => {
-        const prevIndex = (currentCard - 1 + cards.length) % cards.length;
-        showCard(prevIndex);
-    });
-
-    // 초기 카드 표시
-    showCard(currentCard);
-});
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자를 빡치게 하는 방법</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1>개발자를 빡치게 하는 방법</h1>
+            <div class="scroll-indicator">▼</div>
+        </div>
+        <div class="content">
+            <div class="card" id="card-1">
+                <p>무조건 갑작스러운 요구사항 변경하기</p>
+            </div>
+            <div class="card" id="card-2">
+                <p>서버 다운되면 바로 전화하기</p>
+            </div>
+            <div class="card" id="card-3">
+                <p>당장 수정해달라고 하고 휴가 가기</p>
+            </div>
+            <div class="card" id="card-4">
+                <p>프로젝트 마지막 날에 요구사항 변경하기</p>
+            </div>
+            <div class="card" id="card-5">
+                <p>테스트 환경 없이 바로 배포하기</p>
+            </div>
+            <div class="card" id="card-6">
+                <p>무작정 기존 코드를 비판하기</p>
+            </div>
+            <div class="card" id="card-7">
+                <p>댓글을 설명 없이 수정하기</p>
+            </div>
+            <div class="card" id="card-8">
+                <p>슬쩍 세미콜론을 그리스식 물음표(;)로 변경하기</p>
+            </div>
+            <div class="card" id="card-9">
+                <p>중간에 슬쩍 빈 곳이 없는 공백을 넣기</p>
+            </div>
+            <div class="card" id="card-10">
+                <p>요즘에는 다 Chatgpt나 AI로 가능하다고 비판하기</p>
+            </div>
+            <div class="card" id="card-11">
+                <p>비 과학적인 것을 맹신하기(혈액형 성격, 백신 소아마비 등)</p>
+            </div>
+            <div class="card" id="card-12">
+                <p>"컴퓨터 고쳐줘~</p>
+            </div>
+            <div class="card" id="card-13">
+                <p>변수는 다 모르겠구 전역으로 선언~</p>
+            </div>
+            <div class="card" id="card-14">
+                <p>저기 혹시 이거 뭐에요..?(구글 검색하면 최상단에 뜰 내용)</p>
+            </div>
+            <div class="card" id="card-15">
+                <p>새벽 3시 반에 수정사항 있다고 전화하고 잠들기</p>
+            </div>
+            <div class="card" id="card-16">
+                <p>https://github.com/Lee-WonJun/JDD-Description 주둥아리 드!리!븐!</p>
+            </div>
+            <div class="card" id="card-17">
+                <p>Java랑 Javascript는 형제관계 ^-^</p>
+            </div>
+            <div class="card" id="card-18">
+                <p>PHP는 Python의 업그레이드 버전!</p>
+            </div>
+            <div class="card" id="card-19">
+                <p>HTML은 프로그래밍 언어입니다.</p>
+            </div>
+            <div class="card" id="card-20">
+                <p>추가중...</p>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button id="prev-btn">←</button>
+            <button id="next-btn">→</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
